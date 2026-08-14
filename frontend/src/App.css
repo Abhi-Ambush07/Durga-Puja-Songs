@@ -1,0 +1,226 @@
+/* Reset margins */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* Prevents scrollbars */
+}
+
+/* Full Screen Background */
+.background-container {
+  height: 100vh;
+  width: 100vw;
+  /* Add your custom background image here */
+  background-image: url('/my_bg2.png'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+/* --- Top Navbar --- */
+.top-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 500;
+}
+
+.online-badge {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff00;
+}
+
+.glass-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+
+.glass-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* --- Player UI --- */
+.player-ui {
+  background: rgba(0, 0, 0, 0.5); /* Darker glass for better contrast */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 25px 15px 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  min-width: 500px;
+}
+
+.cover-art {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.song-details {
+  flex-grow: 1;
+}
+
+.song-details h2 {
+  margin: 0 0 2px 0;
+  font-size: 1.1rem;
+}
+
+.song-details p {
+  margin: 0 0 10px 0;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Fake Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.progress-fill {
+  width: 30%; /* Static for now */
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+/* --- Controls --- */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.controls button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+}
+
+.icon-btn {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.play-btn {
+  background: white !important;
+  color: black !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* --- Top Navbar --- */
+.top-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between; /* Pushes the two nav-groups to opposite sides */
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.nav-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Shared styling for all top bar pills (Time, Online, Links) */
+.pill-badge, .pill-btn {
+  background: rgba(20, 20, 20, 0.75); /* Dark background matching your image */
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.pill-btn {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-btn:hover {
+  background: rgba(40, 40, 40, 0.9);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00e676; /* Bright green dot */
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 230, 118, 0.6);
+}
+
+.progress-fill {
+  /* Removed width: 30%; */
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: width 0.2s linear; /* Smooths out the bar movement */
+}
