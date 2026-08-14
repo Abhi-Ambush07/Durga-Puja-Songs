@@ -25,7 +25,7 @@ function App() {
 
   // Fetch songs
   useEffect(() => {
-    axios.get('http://localhost:3001/api/songs')
+    axios.get('https://durga-puja-songs-backend.onrender.com/api/songs')
       .then(response => setSongs(response.data))
       .catch(error => console.error('Error fetching songs:', error));
   }, []);
