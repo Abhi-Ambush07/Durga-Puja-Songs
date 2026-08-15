@@ -116,10 +116,12 @@ function App() {
         <div className="nav-group">
           {/* <a href="#" className="pill-btn">About</a>
           <a href="#" className="pill-btn">FAQ</a> */}
-          <a href="https://open.spotify.com/playlist/1Efq1hytqiGCbPYENhfIa6" className="pill-btn">
+          <a href="https://open.spotify.com/playlist/1Efq1hytqiGCbPYENhfIa6" target="_blank" 
+            rel="noopener noreferrer" className="pill-btn">
             <FaSpotify color="#1DB954" size={18} /> Spotify
           </a>
-          <a href="https://music.youtube.com/playlist?list=PLATmAEz89NA0" className="pill-btn">
+          <a href="https://music.youtube.com/playlist?list=PLATmAEz89NA0" target="_blank" 
+            rel="noopener noreferrer" className="pill-btn">
             <SiYoutubemusic color="#ff0000" size={18} /> YT Music
           </a>
         </div>
