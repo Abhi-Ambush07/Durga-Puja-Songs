@@ -224,3 +224,78 @@ body, html {
   border-radius: 2px;
   transition: width 0.2s linear; /* Smooths out the bar movement */
 }
+
+/* --- Responsive Adjustments for 1200x720 --- */
+@media (max-width: 1200px), (max-height: 720px) {
+  /* Re-enable scrolling for smaller/shorter screens */
+  body, html {
+    overflow-y: auto; 
+    overflow-x: hidden; 
+  }
+  
+  .background-container {
+    height: auto;
+    min-height: 100vh;
+    /* Add padding so the player doesn't stick directly to the top/bottom */
+    padding-top: 100px; 
+    padding-bottom: 40px;
+  }
+}
+
+/* --- Mobile Specific Adjustments (Phones) --- */
+@media (max-width: 768px) {
+  /* 1. Top Navbar Adjustments */
+  .top-nav {
+    padding: 10px 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allows horizontal scrolling of top buttons if needed */
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+  }
+
+  .nav-group {
+    gap: 8px;
+  }
+
+  /* 2. Scale down the pill buttons and text */
+  .pill-badge, .pill-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem; /* Smaller font */
+  }
+
+  /* 3. Fix the Player UI width and scale fonts */
+  .player-ui {
+    min-width: 0; /* Removes the 500px restriction */
+    width: 90%;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .cover-art {
+    width: 50px; /* Smaller album art */
+    height: 50px;
+  }
+
+  .song-details h2 {
+    font-size: 0.95rem; /* Smaller title */
+  }
+
+  .song-details p {
+    font-size: 0.75rem; /* Smaller subtitle */
+  }
+
+  /* 4. Scale down controls */
+  .controls {
+    gap: 10px;
+  }
+
+  .play-btn {
+    width: 35px; /* Smaller play button */
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .icon-btn {
+    font-size: 1rem; /* Smaller skip icons */
+  }
+}
