@@ -109,7 +109,7 @@ function App() {
         <div className="nav-group">
           <span className="pill-badge">{currentTime}</span>
           <span className="pill-badge online-badge">
-            <span className="pulse-dot"></span> 1119 online
+            <span className="pulse-dot"></span> online
           </span>
         </div>
 
