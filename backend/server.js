@@ -17,7 +17,7 @@ const pool = new Pool({
 app.get('/api/songs', async (req, res) => {
   try {
     // Note: You are querying 'songsyt' here. Ensure your table in Render is named exactly 'songsyt'.
-    const result = await pool.query('SELECT * FROM songsyt ORDER BY id ASC');
+    const result = await pool.query('SELECT * FROM songs ORDER BY id ASC');
     res.json(result.rows);
   } catch (err) {
     res.status(500).json({ error: err.message });
